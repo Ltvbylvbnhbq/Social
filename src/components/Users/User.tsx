@@ -15,7 +15,7 @@ const User: React.FC<PropsType> = ({user, followingInProgress, follow, unfollow 
     return <div>
         <span>
             <div>
-                <NavLink to={ '/profile' + user.id}>
+                <NavLink to={ '/profile/' + user.id}>
                     <img src={user.photos.small != null ? user.photos.small : userPhoto}
                          className={styles.userPhoto}/>
                 </NavLink>

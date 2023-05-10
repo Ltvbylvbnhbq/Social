@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import './App.css';
 import 'antd/dist/reset.css'
-import {BrowserRouter, Link, Navigate, Route, Routes} from "react-router-dom";
+import {BrowserRouter, HashRouter, Link, Navigate, Route, Routes} from "react-router-dom";
 import {LoginPage} from "./components/Login/Login";
 import {connect, Provider} from "react-redux";
 import {compose} from "redux";
@@ -122,11 +122,11 @@ let AppContainer = compose<React.ComponentType>(    // compose объединя�
     connect(mapStateToProps, {initializeApp}))(App);
 
 const SocialJSApp: React.FC = () => {
-    return <BrowserRouter>
+    return <HashRouter>
         <Provider store={store}>
             <AppContainer/>
         </Provider>
-    </BrowserRouter>
+    </HashRouter>
 }
 
 export default SocialJSApp;

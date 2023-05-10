@@ -69,7 +69,8 @@ export const actions = {
     toggleFollowingProgress: (isFetching: boolean, userId: number) => ({
         type: 'SN/USERS/TOGGLE_IS_FOLLOWING_PROGRESS',
         isFetching,
-        userId} as const)
+        userId
+    } as const)
 }
 
 export const requestUsers = (page: number,
